@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_loading"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_main_layout"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/cv_toolbar"
+            android:elevation="@dimen/padding_x_large">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_toolbar"
+                android:background="@color/purple_200">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/padding_large"
+                    app:cardCornerRadius="@dimen/padding_x_small">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ed_ger_city_name"
+                        android:hint="@string/search_places"
+                        android:drawableStart="@drawable/baseline_search_24"
+                        android:drawablePadding="@dimen/padding_large"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/padding_large"
+                        android:paddingEnd="@dimen/padding_large"
+                        android:textColor="@color/black"
+                        android:drawableTint="@color/black"
+                        android:background="@color/white">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_sub_layout"
+            android:layout_below="@id/cv_toolbar">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/iv_weather_bg"
+                    android:src="@drawable/mist_bg"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:layout_marginStart="@dimen/padding_large"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_date_and_time"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large"
+                        android:text="@string/demo_date"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/padding_large">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_day_max_temp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_large"
+                            android:text="@string/day"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_day_min_temp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_large"
+                            android:text="@string/day"></TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/padding_large">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_temp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_super_large"
+                            android:text="@string/main_temp"></TextView>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="@dimen/padding_large"
+                            android:layout_marginEnd="@dimen/padding_large"
+                            android:id="@+id/iv_weather_icon"
+                            android:src="@drawable/sun"></ImageView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/padding_large">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_feels_like"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_large"
+                            android:text="@string/feels_like"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_weather_type"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_large"
+                            android:text="@string/weather_type"></TextView>
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.google.android.material.card.MaterialCardView>
+
+
+            </FrameLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
