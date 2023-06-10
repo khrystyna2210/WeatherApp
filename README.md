@@ -1,6 +1,7 @@
 ﻿# WeatherApp
  ## Description
  Android app displays weather of user's location. Weather app allows user to enter city name and get weather information about city.
+ App uses Retrofit to get data from API
 ## Screenshots
 ![1](https://github.com/khrystyna2210/WeatherApp/assets/34044397/e1620ef0-9dce-469b-82e7-b3a618993979)
 ![4](https://github.com/khrystyna2210/WeatherApp/assets/34044397/9f467d11-9abe-4421-bdf8-0eb603816bff)
